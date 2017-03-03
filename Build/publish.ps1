@@ -12,7 +12,7 @@ Set-Location -Path Build -PassThru
 
 #using simple text replacement
 $con = Get-Content .\QueueIT.Security.nuspec
-$con | % { $_.Replace("<version></version>", "<version>" + $ver + "</version>") } | Set-Content .\QueueIT.Security.nuspec
+$con | % { $_.Replace("<version>1.0.0</version>", "<version>" + $ver + "</version>") } | Set-Content .\QueueIT.Security.nuspec
 
 "Con " + $con
 
